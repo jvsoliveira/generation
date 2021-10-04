@@ -13,7 +13,7 @@ public class Exerc02 {
 	    }
 	    System.out.println();
 	    Arrays.sort(vetor);
-        for (int i = (vetor.length - 1); i >= 0; i--) {
+        for (int i = 0; i < vetor.length; i++) {
 	    	System.out.println(vetor[i]);
 	    }
 		ler.close();
