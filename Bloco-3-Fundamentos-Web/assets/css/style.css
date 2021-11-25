@@ -1,4 +1,4 @@
-/* Estilo da página index.html*/
+/* Pág Home*/
 
 .center{
     text-align: center;
@@ -57,3 +57,9 @@
 .galeria li img{
 width: 100%;
 }
+
+/* Pág Contato*/
+
+.ml-50 {
+    margin-left: 50px;
+ }
