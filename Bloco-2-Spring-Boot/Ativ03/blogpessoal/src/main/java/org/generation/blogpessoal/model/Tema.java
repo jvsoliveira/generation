@@ -26,7 +26,6 @@ public class Tema {
 	@Size (min = 5, max = 30)
 	private String nome;
 	
-	@NotBlank(message = "O atributo descricao não pode ser nulo ou branco!")
 	@Size (min = 5, max = 100)
 	private String descricao;
 	
