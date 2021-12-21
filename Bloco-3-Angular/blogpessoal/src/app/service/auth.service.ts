@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { User } from '../model/User';
@@ -11,19 +12,20 @@ import { UserLogin } from '../model/UserLogin';
 export class AuthService {
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) { }
 
   login(userLogin: UserLogin): Observable<UserLogin>{
-    return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin)
+    return this.http.post<UserLogin>('https://blogpessoaljvso.herokuapp.com/usuarios/logar', userLogin)
   }
 
   register(user: User): Observable<User>{
-    return this.http.post<User>('http://localhost:8080/usuarios/cadastrar', user)
+    return this.http.post<User>('https://blogpessoaljvso.herokuapp.com/usuarios/cadastrar', user)
   }
 
   getByIdUser(id:number): Observable<User>{
-    return this.http.get<User>(`http://localhost:8080/usuarios/${id}`)
+    return this.http.get<User>(`https://blogpessoaljvso.herokuapp.com/usuarios/${id}`)
   }
 
   logado() {
